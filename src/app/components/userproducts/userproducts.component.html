@@ -1,0 +1,23 @@
+
+<div class="container text-center mt-5">
+  <div class="row">
+    <ng-container *ngFor="let product of products" >
+
+      <div class="card col-md-4 mb-5" *ngIf="product.userId == Id">
+          <div class="card-body" >
+              <img src="{{product.imgurl}}" class="card-img-top" alt="...">
+            <h3 class="card-title">{{product.productName}}</h3>
+            <p class="card-text">
+              <b>Fiyat:</b> {{product.price}}<br>
+              <b>m²:</b> {{product.houseSize}}m²<br>
+              <b>Oda Sayısı:</b> {{product.howManyRoom}}<br>
+              <b>Bina Katı:</b> {{product.houseFloor}}<br>
+              <b>Bina Yaşı:</b> {{product.houseAge}}<br>
+            </p>
+            <a href="/userproductdetail?id={{product.id}}" class="card-link">Detayları görmek için tıklayınız.</a>
+          </div>
+    </div>
+  </ng-container>
+</div>
+  </div>
+

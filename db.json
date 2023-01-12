@@ -1,0 +1,75 @@
+{
+  "_comment": [
+    "EV tipleri: 1=Kiralık ev/daire, 2=Satılık Ev/Daire,"
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "batuhan",
+      "surname": "barda",
+      "mail": "batuhan@mail.com",
+      "admin": 1,
+      "password": "123"
+    },
+    {
+      "name": "waf",
+      "surname": "ggg",
+      "mail": "a@a",
+      "admin": 0,
+      "password": "213",
+      "id": 3
+    },
+    {
+      "name": "m2",
+      "surname": "a",
+      "mail": "a@b.com",
+      "admin": 0,
+      "password": "1",
+      "id": 5
+    }
+  ],
+  "products": [
+    {
+      "id": 2,
+      "imgurl": "ev-satisi-icin-ilan-aciklamasina-neler-yazilmalidir-4.jpg",
+      "productName": "Kiralık ev",
+      "description": "B mahallesinde site sahibinden lüks kiralık ev.",
+      "price": 8000,
+      "houseType": 1,
+      "houseSize": 80,
+      "howManyRoom": "3+1",
+      "houseFloor": 4,
+      "houseAge": 3,
+      "adress": "B mah. c sok. no:3 kat 4 daire 3 X/Y",
+      "userId": 1
+    },
+    {
+      "id": 7,
+      "imgurl": "ev-satisi-icin-ilan-aciklamasina-neler-yazilmalidir-4.jpg",
+      "productName": "Kiralık ev",
+      "description": "B mahallesinde site sahibinden lüks kiralık ev.",
+      "price": 8000,
+      "houseType": 1,
+      "houseSize": 80,
+      "howManyRoom": "3+1",
+      "houseFloor": 4,
+      "houseAge": 3,
+      "adress": "B mah. c sok. no:3 kat 4 daire 3 X/Y",
+      "userId": 1
+    },
+    {
+      "id": 6,
+      "imgurl": "ev-satisi-icin-ilan-aciklamasina-neler-yazilmalidir-4.jpg",
+      "productName": "Kiralık ev",
+      "description": "B mahallesinde site sahibinden lüks kiralık ev.",
+      "price": 8000,
+      "houseType": 1,
+      "houseSize": 80,
+      "howManyRoom": "3+1",
+      "houseFloor": 4,
+      "houseAge": 3,
+      "adress": "B mah. c sok. no:3 kat 4 daire 3 X/Y",
+      "userId": 1
+    }
+  ]
+}

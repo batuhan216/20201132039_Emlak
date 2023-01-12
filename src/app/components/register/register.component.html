@@ -1,0 +1,39 @@
+  <div class="container mb-5">
+    <div class="row">
+        <div class="col-md-12"><p class="text-center fs-2 pt-5">Hızlı, güvenli ve kolay bir şekilde sitemize kayıt olabilirsiniz.</p></div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+  <form [formGroup]="form" (ngSubmit)="Register()">
+    <div class="modal-content">
+      <div class="bg-dark text-white text-center">
+        <h4 class="py-3">Kayıt Ol</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label>Üye Adı*</label>
+          <input type="text" class="form-control" formControlName="name">
+          <label>Üye Soyadı*</label>
+          <input type="text" class="form-control" formControlName="surname">
+          <label>Üye E-Posta*</label>
+          <input type="text" class="form-control" formControlName="email">
+          <label>Üye Telefon*</label>
+          <input type="text" class="form-control" formControlName="mobile">
+          <label>Parola*</label>
+          <input type="password" class="form-control" formControlName="password">
+          <label class="text-danger">* ile işaretlenmiş alanlar doldurulması zorunludur.</label>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+
+        <input type="submit" class="btn btn-outline-dark mt-3" [disabled]="!form.valid" value="Kayıt Ol">
+      </div>
+    </div>
+
+  </form>
+</div>
+    </div>
+  </div>
+  <div id="filler" style="height:300px;"></div>

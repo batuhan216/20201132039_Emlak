@@ -1,0 +1,43 @@
+<div class="container text-center mt-5">
+  <div class="row">
+    <h1>ÜRÜNLER</h1>
+      <div class="card col-md-4 mb-5" *ngFor="let product of products">
+          <div class="card-body">
+              <img src="{{product.imgurl}}" class="card-img-top" alt="...">
+            <h3 class="card-title">{{product.productName}}</h3>
+            <p class="card-text">
+              <b>Fiyat:</b> {{product.price}}<br>
+              <b>m²:</b> {{product.houseSize}}m²<br>
+              <b>Oda Sayısı:</b> {{product.howManyRoom}}<br>
+              <b>Bulunduğu Kat:</b> {{product.houseFloor}}<br>
+              <b>Bina Yaşı:</b> {{product.houseAge}}<br>
+            </p>
+            <a href="/admin-products?id={{product.id}}" class="card-link">Detayları görmek için tıklayınız.</a>
+            <br>
+            <button class="btn btn-outline-danger me-0" value="Sil" (click)="Delete(product.id)">Sil</button>
+          </div>
+    </div>
+  </div>
+  <div class="row">
+    <h1>KULLANICILAR</h1>
+    <table class="table table-hover mt-3">
+      <thead>
+        <th>Adı Soyadı</th>
+        <th>E-Posta</th>
+        <th>Yönetici mi</th>
+        <th>Düzenle</th>
+        <th>Sil</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let member of members">
+          <td>{{member.name}} {{member.surname}}</td>
+          <td>{{member.email}}</td>
+          <td>{{member.admin}}</td>
+          <td><a class="btn btn-outline-dark" href="/admin-members?id={{member.email}}">Düzenle</a></td>
+          <td><button class="btn btn-outline-danger" (click)="DeleteMember(member.email)">Sil</button></td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+<div style="height:100px ;"></div>
+</div>

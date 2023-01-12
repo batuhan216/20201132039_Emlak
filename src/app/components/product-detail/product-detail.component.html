@@ -1,0 +1,24 @@
+<div class="container text-center mt-5">
+  <div class="row">
+    <div class="col-md-3"></div>
+      <div class="card col-md-6 mb-5">
+          <div class="card-body ">
+              <img src="{{product.imgurl}}" class="card-img-top" alt="...">
+            <h3 class="card-title">{{product.productName}}</h3>
+            <p class="card-text">
+              <b>Fiyat:</b> {{product.price}}<br>
+              <b>Satılık Mı Kiralık Mı?</b> {{product.houseTypeId}}<br>
+              <b>Ürün Tipi</b> {{product.productTypeId}}<br>
+
+              <b>m²:</b> {{product.houseSize}}m²<br>
+              <b>Oda Sayısı:</b> {{product.howManyRoom}}<br>
+              <b>Bulunduğu Kat:</b> {{product.houseFloor}}<br>
+              <b>Bina Yaşı:</b> {{product.houseAge}}<br>
+              <b>Adres: </b>{{product.adress}}<br>
+              <b>Açıklama: </b>{{product.description}}<br>
+              <button class="btn btn-outline-dark me-0">Satın Al</button>
+            </p>
+          </div>
+    </div>
+  </div>
+</div>

@@ -1,14 +1,95 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Proje</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <p class="text-muted">MERHABA</p>
-  <app-root></app-root>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+
+    <title>
+      Emlak.
+    </title>
+
+    <script>
+      function myFunction() {
+        var login = document.getElementById("lgin");
+        var register = document.getElementById("rgstr");
+        var welcomeText = document.getElementById("hg");
+        var logout = document.getElementById("cikis");
+        var products = document.getElementById("meprod");
+        var adminPanel = document.getElementById("panel");
+        var admin = localStorage.getItem("admin");
+        if(admin == "true")
+        {
+          adminPanel.style.display = "block";
+        }
+        else
+        {
+          adminPanel.style.display = "none";
+        }
+        if (localStorage.getItem('user') != null)
+        {
+            login.style.display = "none";
+            register.style.display = "none";
+            welcomeText.style.display = "block";
+            welcomeText.innerHTML = "Hoş geldiniz " + localStorage.getItem("name").toUpperCase();
+            logout.style.display = "block";
+            products.style.display = "block";
+        }
+        else
+        {
+          products.style.display = "none";
+          welcomeText.style.display = "none";
+          logout.style.display = "none";
+        }
+      }
+
+      function quit()
+      {
+        localStorage.clear();
+        location.reload();
+      }
+    </script>
+  </head>
+  <body onload="myFunction()">
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+      <div class="container-fluid fs-5 fw-bold">
+        <a class="navbar-brand me-5" href="../">Barda Emlak</a>
+        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll se-2" style="--bs-scroll-height: 100px;">
+            <li class="nav-item ">
+              <a class="nav-link" href="/products" >Ürünler</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="/sellorrenthouse" >Ev Sat/Kirala</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" id="meprod" href="/userproducts" >Ürünlerim</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" id="panel" href="/admin" >Admin Panel</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav me-0 my-2 my-lg-0 navbar-nav-scroll se-2" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link register" id="rgstr" href="/register">Kayıt Ol</a>
+            </li>
+            <a class="nav-link text-white" id = "hg">Hoşgeldiniz</a>
+            <li class="nav-item">
+              <a class="nav-link" id="lgin" href="/login">Giriş Yap</a>
+              <a href="/logout" class="nav-link" id="cikis" >Çıkış Yap</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <app-root></app-root>
+  </body>
+  <footer>
+    <div class="bg-dark text-white py-0" style="width: 100%;">
+      <p class="my-0 py-5 text-center fs-2 fw-bold ">20201132039-BatuhanBARDA</p>
+    </div>
+  </footer>
 </html>

@@ -1,0 +1,43 @@
+<div class="container text-center mt-5">
+<div class="row">
+  <h1>KULLANICILAR</h1>
+  <table class="table table-hover mt-3">
+    <thead>
+      <th>Adı Soyadı</th>
+      <th>E-Posta</th>
+      <th>Yönetici mi</th>
+      <th>Telefon No</th>
+      <th>Düzenle</th>
+      <th>Sil</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{member.name}} {{member.surname}}</td>
+        <td>{{member.email}}</td>
+        <td>{{member.admin}}</td>
+        <td>{{member.mobile}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="modal-body">
+    <div class="form-group">
+      <label>İsim</label>
+      <input type="text" value="{{member.name}}" class="form-control" #name>
+      <label>Soy İsim*</label>
+      <input type="text" value="{{member.surname}}" class="form-control" #surname>
+      <label>Mobile*</label>
+      <input type="text" value="{{member.mobile}}" class="form-control" #mobile>
+      <label>Admin*</label>
+      <select class="form-select form-select-lg mb-3" #admin>
+        <option selected value="false">false</option>
+        <option value="true">true</option>
+        </select>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <input type="submit" class="btn btn-outline-dark mt-3" value="Değiştir" (click)="ChangeMember(name.value, surname.value, admin.value, mobile.value, member.email)">
+    <input type="submit" class="btn btn-outline-danger mt-3" value="Sil" (click)="DeleteMember()">
+  </div>
+</div>
+</div>
+<div style="height:300px ;"></div>
